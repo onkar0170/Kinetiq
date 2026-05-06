@@ -1,0 +1,139 @@
+import { HeroSection } from './components/HeroSection';
+import { PowerStats } from './components/PowerStats';
+import { PressurePlateDemo } from './components/PressurePlateDemo';
+import { EnergyChart } from './components/EnergyChart';
+import { HowItWorks } from './components/HowItWorks';
+import { ExperimentalInvestigation } from './components/ExperimentalInvestigation';
+import { ApplicationsGrid } from './components/ApplicationsGrid';
+import { BenefitsSection } from './components/BenefitsSection';
+import { Zap } from 'lucide-react';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+''      {/* Header */}
+      <header className="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 sticky top-0 z-50 backdrop-blur-lg bg-opacity-90">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg">
+                <Zap className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold">Kinetiq</h1>
+                <p className="text-xs text-gray-500">Energy from Every Step</p>
+              </div>
+            </div>
+            <nav className="hidden md:flex items-center gap-6 text-sm">
+              <a href="#" className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-400 transition-colors">
+                Technology
+              </a>
+              <a href="#" className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-400 transition-colors">
+                Applications
+              </a>
+              <a href="#" className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-400 transition-colors">
+                Contact
+              </a>
+              <button className="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-lg hover:shadow-lg transition-all">
+                Get Started
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+        {/* Hero */}
+        <HeroSection />
+
+        {/* Stats */}
+        <PowerStats />
+
+        {/* Interactive Demo and Chart */}
+        <div className="grid lg:grid-cols-2 gap-6">
+          <PressurePlateDemo />
+          <EnergyChart />
+        </div>
+
+        {/* Experimental Investigation */}
+        <ExperimentalInvestigation />
+
+        {/* How It Works */}
+        <HowItWorks />
+
+        {/* Benefits */}
+        <BenefitsSection />
+
+        {/* Applications */}
+        <ApplicationsGrid />
+
+        {/* Call to Action */}
+        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 md:p-12 text-white text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Power the Future?</h2>
+          <p className="text-lg text-emerald-50 mb-6 max-w-2xl mx-auto">
+            Join the renewable energy revolution. Install Kinetiq footstep power generators in your facility 
+            and start generating clean energy from every step.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-3 bg-white text-emerald-600 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+              Request a Quote
+            </button>
+            <button className="px-8 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
+              Download Brochure
+            </button>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="p-1.5 bg-gradient-to-br from-emerald-500 to-teal-600 rounded">
+                  <Zap className="h-4 w-4 text-white" />
+                </div>
+                <span className="font-bold">Kinetiq</span>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Converting footsteps into sustainable energy for a cleaner tomorrow.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Product</h4>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li><a href="#" className="hover:text-emerald-600">Technology</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Applications</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Case Studies</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Pricing</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li><a href="#" className="hover:text-emerald-600">About Us</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Careers</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Press</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3">Resources</h4>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li><a href="#" className="hover:text-emerald-600">Documentation</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Support</a></li>
+                <li><a href="#" className="hover:text-emerald-600">Blog</a></li>
+                <li><a href="#" className="hover:text-emerald-600">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+            <p>© 2026 Kinetiq. All rights reserved. Powering sustainability, one step at a time.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
